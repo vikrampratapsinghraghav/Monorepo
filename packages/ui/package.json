@@ -10,6 +10,11 @@
   "scripts": {
     "lint": "eslint \"**/*.ts\""
   },
+  "dependencies": {
+    "i18next": "^22.0.0",
+    "react-i18next": "^12.0.0",
+    "react": "18.3.1"
+  },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
