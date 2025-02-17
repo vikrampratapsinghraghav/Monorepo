@@ -30,12 +30,27 @@ importers:
 
   apps/mobileApp:
     dependencies:
+      '@react-native-async-storage/async-storage':
+        specifier: ^2.1.1
+        version: 2.1.1(react-native@0.77.1(@babel/core@7.26.7)(@babel/preset-env@7.26.9(@babel/core@7.26.7))(@react-native-community/cli-server-api@15.0.1)(@types/react@18.3.18)(react@18.3.1))
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      i:
+        specifier: ^0.3.7
+        version: 0.3.7
+      npm:
+        specifier: ^11.1.0
+        version: 11.1.0
       react:
         specifier: 18.3.1
         version: 18.3.1
       react-native:
         specifier: 0.77.1
         version: 0.77.1(@babel/core@7.26.7)(@babel/preset-env@7.26.9(@babel/core@7.26.7))(@react-native-community/cli-server-api@15.0.1)(@types/react@18.3.18)(react@18.3.1)
+      react-native-splash-screen:
+        specifier: ^3.3.0
+        version: 3.3.0(react-native@0.77.1(@babel/core@7.26.7)(@babel/preset-env@7.26.9(@babel/core@7.26.7))(@react-native-community/cli-server-api@15.0.1)(@types/react@18.3.18)(react@18.3.1))
     devDependencies:
       '@babel/core':
         specifier: ^7.25.2
@@ -1225,6 +1240,11 @@ packages:
   '@nodelib/fs.walk@1.2.8':
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
+
+  '@react-native-async-storage/async-storage@2.1.1':
+    resolution: {integrity: sha512-UqlnxddwM3rlCHvteFz+HpIXjqhQM7GkBgVQ9sMvMdl8QVOJQDjG7BODCUvabysMDw+9QfMFlLiOI8U6c0VzzQ==}
+    peerDependencies:
+      react-native: ^0.0.0-0 || >=0.65 <1.0
 
   '@react-native-community/cli-clean@15.0.1':
     resolution: {integrity: sha512-flGTfT005UZvW2LAXVowZ/7ri22oiiZE4pPgMvc8klRxO5uofKIRuohgiHybHtiCo/HNqIz45JmZJvuFrhc4Ow==}
@@ -2639,6 +2659,10 @@ packages:
       typescript:
         optional: true
 
+  i@0.3.7:
+    resolution: {integrity: sha512-FYz4wlXgkQwIPqhzC5TdNMLSE5+GS1IIDJZY/1ZiEPCT2S3COUVZeT5OW4BmW4r5LHLQuOosSwsvnroG9GR59Q==}
+    engines: {node: '>=0.4'}
+
   ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
 
@@ -2772,6 +2796,10 @@ packages:
 
   is-path-inside@3.0.3:
     resolution: {integrity: sha512-Fd4gABb+ycGAmKou8eMftCupSir5lRxqf4aD/vd0cD2qc4HL07OjCeuHMr8Ro4CoMaeCKDB0/ECBOVWjTwUvPQ==}
+    engines: {node: '>=8'}
+
+  is-plain-obj@2.1.0:
+    resolution: {integrity: sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==}
     engines: {node: '>=8'}
 
   is-plain-object@2.0.4:
@@ -3149,6 +3177,10 @@ packages:
   memoize-one@5.2.1:
     resolution: {integrity: sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==}
 
+  merge-options@3.0.4:
+    resolution: {integrity: sha512-2Sug1+knBjkaMsMgf1ctR1Ujx+Ayku4EdJN4Z+C2+JzoeF7A3OZ9KM2GY0CpQS51NR61LTurMJrRKPhSs3ZRTQ==}
+    engines: {node: '>=10'}
+
   merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
 
@@ -3306,6 +3338,78 @@ packages:
   npm-run-path@4.0.1:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
     engines: {node: '>=8'}
+
+  npm@11.1.0:
+    resolution: {integrity: sha512-rPMBrZud26lI/LcjQeLw/K5Hf1apXMKgkpNNEzp0YQYmM877+T1ZNKPcB2hnTi7e6fBNz8xLtMMn/w46fVUqGw==}
+    engines: {node: ^20.17.0 || >=22.9.0}
+    hasBin: true
+    bundledDependencies:
+      - '@isaacs/string-locale-compare'
+      - '@npmcli/arborist'
+      - '@npmcli/config'
+      - '@npmcli/fs'
+      - '@npmcli/map-workspaces'
+      - '@npmcli/package-json'
+      - '@npmcli/promise-spawn'
+      - '@npmcli/redact'
+      - '@npmcli/run-script'
+      - '@sigstore/tuf'
+      - abbrev
+      - archy
+      - cacache
+      - chalk
+      - ci-info
+      - cli-columns
+      - fastest-levenshtein
+      - fs-minipass
+      - glob
+      - graceful-fs
+      - hosted-git-info
+      - ini
+      - init-package-json
+      - is-cidr
+      - json-parse-even-better-errors
+      - libnpmaccess
+      - libnpmdiff
+      - libnpmexec
+      - libnpmfund
+      - libnpmorg
+      - libnpmpack
+      - libnpmpublish
+      - libnpmsearch
+      - libnpmteam
+      - libnpmversion
+      - make-fetch-happen
+      - minimatch
+      - minipass
+      - minipass-pipeline
+      - ms
+      - node-gyp
+      - nopt
+      - normalize-package-data
+      - npm-audit-report
+      - npm-install-checks
+      - npm-package-arg
+      - npm-pick-manifest
+      - npm-profile
+      - npm-registry-fetch
+      - npm-user-validate
+      - p-map
+      - pacote
+      - parse-conflict-json
+      - proc-log
+      - qrcode-terminal
+      - read
+      - semver
+      - spdx-expression-parse
+      - ssri
+      - supports-color
+      - tar
+      - text-table
+      - tiny-relative-date
+      - treeverse
+      - validate-npm-package-name
+      - which
 
   nullthrows@1.1.1:
     resolution: {integrity: sha512-2vPPEi+Z7WqML2jZYddDIfy5Dqb0r2fze2zTxNNknZaFpVHU3mFB3R+DWeJWGVx0ecvttSGlJTI+WG+8Z4cDWw==}
@@ -3566,6 +3670,11 @@ packages:
 
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
+
+  react-native-splash-screen@3.3.0:
+    resolution: {integrity: sha512-rGjt6HkoSXxMqH4SQUJ1gnPQlPJV8+J47+4yhgTIan4bVvAwJhEeJH7wWt9hXSdH4+VfwTS0GTaflj1Tw83IhA==}
+    peerDependencies:
+      react-native: '>=0.57.0'
 
   react-native@0.77.1:
     resolution: {integrity: sha512-g2OMtsQqhgOuC4BqFyrcv0UsmbFcLOwfVRl/XAEHZK0p8paJubGIF3rAHN4Qh0GqGLWZGt7gJ7ha2yOmCFORoA==}
@@ -5560,6 +5669,11 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.0
 
+  '@react-native-async-storage/async-storage@2.1.1(react-native@0.77.1(@babel/core@7.26.7)(@babel/preset-env@7.26.9(@babel/core@7.26.7))(@react-native-community/cli-server-api@15.0.1)(@types/react@18.3.18)(react@18.3.1))':
+    dependencies:
+      merge-options: 3.0.4
+      react-native: 0.77.1(@babel/core@7.26.7)(@babel/preset-env@7.26.9(@babel/core@7.26.7))(@react-native-community/cli-server-api@15.0.1)(@types/react@18.3.18)(react@18.3.1)
+
   '@react-native-community/cli-clean@15.0.1':
     dependencies:
       '@react-native-community/cli-tools': 15.0.1
@@ -7498,6 +7612,8 @@ snapshots:
     optionalDependencies:
       typescript: 5.6.3
 
+  i@0.3.7: {}
+
   ieee754@1.2.1: {}
 
   ignore@5.3.2: {}
@@ -7621,6 +7737,8 @@ snapshots:
   is-number@7.0.0: {}
 
   is-path-inside@3.0.3: {}
+
+  is-plain-obj@2.1.0: {}
 
   is-plain-object@2.0.4:
     dependencies:
@@ -8197,6 +8315,10 @@ snapshots:
 
   memoize-one@5.2.1: {}
 
+  merge-options@3.0.4:
+    dependencies:
+      is-plain-obj: 2.1.0
+
   merge-stream@2.0.0: {}
 
   merge2@1.4.1: {}
@@ -8272,7 +8394,7 @@ snapshots:
   metro-source-map@0.81.1:
     dependencies:
       '@babel/traverse': 7.26.7
-      '@babel/traverse--for-generate-function-map': '@babel/traverse@7.26.7'
+      '@babel/traverse--for-generate-function-map': '@babel/traverse@7.26.9'
       '@babel/types': 7.26.7
       flow-enums-runtime: 0.0.6
       invariant: 2.2.4
@@ -8431,6 +8553,8 @@ snapshots:
   npm-run-path@4.0.1:
     dependencies:
       path-key: 3.1.1
+
+  npm@11.1.0: {}
 
   nullthrows@1.1.1: {}
 
@@ -8684,6 +8808,10 @@ snapshots:
   react-is@17.0.2: {}
 
   react-is@18.3.1: {}
+
+  react-native-splash-screen@3.3.0(react-native@0.77.1(@babel/core@7.26.7)(@babel/preset-env@7.26.9(@babel/core@7.26.7))(@react-native-community/cli-server-api@15.0.1)(@types/react@18.3.18)(react@18.3.1)):
+    dependencies:
+      react-native: 0.77.1(@babel/core@7.26.7)(@babel/preset-env@7.26.9(@babel/core@7.26.7))(@react-native-community/cli-server-api@15.0.1)(@types/react@18.3.18)(react@18.3.1)
 
   react-native@0.77.1(@babel/core@7.26.7)(@babel/preset-env@7.26.9(@babel/core@7.26.7))(@react-native-community/cli-server-api@15.0.1)(@types/react@18.3.18)(react@18.3.1):
     dependencies:
