@@ -23,3 +23,15 @@ function App() {
 }
 
 export default App;
+
+// this  line imports the colors const from our ui package
+// import { colors } from '../../../packages/ui/utils/theme' 
+// function App() {
+//   return (
+//     <div style={{ backgroundColor: colors.primary }}>
+//       A div with a primary background color
+//     </div>
+//   )
+// }
+
+// export default App
